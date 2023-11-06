@@ -24,25 +24,30 @@ import "./styles.css";
  * If you don't have one of the social sites listed, leave it as an empty string.
  */
 const siteProps = {
-  name: "Alexandrie Grenier",
-  title: "Web Designer & Content Creator",
-  email: "alex@example.com",
-  gitHub: "microsoft",
-  instagram: "microsoft",
-  linkedIn: "satyanadella",
+  name: "Miguel Terrones",
+  title: "Physiotherapist and Computer Systems Student",
+  email: "miguelterfl@gmail.com",
+  gitHub: "MiguelTerfl",
+  linkedIn: "miguelterrones",
   medium: "",
-  twitter: "microsoft",
-  youTube: "Code",
 };
 
 const primaryColor = "#4E567E";
 const secondaryColor = "#D2F1E4";
 
+const highlightedStyle = {
+  color: "black",
+  backgroundColor: "rgba(255, 255, 255, 0.35)",
+};
+
 const App = () => {
   return (
     <div id="main">
       <Header />
-      <Home name={siteProps.name} title={siteProps.title} />
+      <Home 
+        name={<span style={highlightedStyle}>{siteProps.name}</span>}
+        title={<span style={highlightedStyle}>{siteProps.title}</span>}
+      />
       <About />
       <Portfolio />
       <Footer {...siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
